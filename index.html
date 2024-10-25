@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Solar System</title>
+
+  <!-- Bootstrap and Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    crossorigin="anonymous"
+  />
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #main-container {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .sim-info {
+      position: absolute;
+      z-index: 10;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sim-info">
+    Current Date: <span id="current-date">?</span>
+    <br>
+    <button id="btn-slower" class="btn btn-success">Slower</button>
+    <button id="btn-faster" class="btn btn-success">Faster</button>
+    <button id="btn-start" class="btn btn-success">Start</button>
+    <button id="btn-stop" class="btn btn-success">Stop</button>
+    <button id="btn-set-time" class="btn btn-success">Set Time</button>
+    <button id="btn-set-jd-per-second" class="btn btn-success">Set Jd/s</button>
+  </div>
+
+  <!-- Container for the SpaceKit simulation -->
+  <div id="main-container"></div>
+
+  <!-- Bootstrap JavaScript and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+  <!-- Include Spacekit.js -->
+  <script src="https://typpo.github.io/spacekit/build/spacekit.js"></script>
+
+  <!-- Link to main JavaScript file -->
+  <script src="solar-system.js"></script>
+
+</body>
+</html>
